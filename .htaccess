@@ -5,12 +5,27 @@
   RewriteEngine On
   RewriteBase /
   
-  # Don't rewrite files or directories
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
+  # Don't rewrite files that exist
+  RewriteCond %{REQUEST_FILENAME} -f
+  RewriteRule ^ - [L]
+  
+  # Don't rewrite directories that exist
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+  
+  # Don't rewrite assets (JS, CSS, images, etc.)
+  RewriteCond %{REQUEST_URI} \.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot)$ [NC]
+  RewriteRule ^ - [L]
   
   # Rewrite everything else to index.html
   RewriteRule . /index.html [L]
+</IfModule>
+
+# Set correct MIME types
+<IfModule mod_mime.c>
+  AddType application/javascript js
+  AddType text/css css
+  AddType image/svg+xml svg
 </IfModule>
 
 # Enable compression
@@ -38,4 +53,3 @@
   Header set X-Frame-Options "SAMEORIGIN"
   Header set X-XSS-Protection "1; mode=block"
 </IfModule>
-
