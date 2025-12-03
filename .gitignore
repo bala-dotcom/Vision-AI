@@ -28,3 +28,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Build artifacts and upload packages
+*.zip
+hostinger-upload-temp/
+hostinger-*-upload.zip
