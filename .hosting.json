@@ -1,0 +1,14 @@
+{
+  "build": {
+    "commands": [
+      "npm install",
+      "npm run build"
+    ],
+    "output": "dist"
+  },
+  "deploy": {
+    "source": "dist",
+    "target": "public_html"
+  }
+}
+
