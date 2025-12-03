@@ -17,6 +17,14 @@
   RewriteCond %{REQUEST_URI} \.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot)$ [NC]
   RewriteRule ^ - [L]
   
+  # Block access to source files (jsx, tsx, ts, etc.)
+  RewriteCond %{REQUEST_URI} \.(jsx|tsx|ts)$ [NC]
+  RewriteRule ^ - [F,L]
+  
+  # Block access to src directory
+  RewriteCond %{REQUEST_URI} ^/src/ [NC]
+  RewriteRule ^ - [F,L]
+  
   # Rewrite everything else to index.html
   RewriteRule . /index.html [L]
 </IfModule>
@@ -24,6 +32,7 @@
 # Set correct MIME types
 <IfModule mod_mime.c>
   AddType application/javascript js
+  AddType application/javascript jsx
   AddType text/css css
   AddType image/svg+xml svg
 </IfModule>
