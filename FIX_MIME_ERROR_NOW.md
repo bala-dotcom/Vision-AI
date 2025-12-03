@@ -45,14 +45,16 @@ public_html/
    - Keep `api/` folder (if exists)
 
 2. **Upload these files from your computer:**
-   - Source: `C:\Users\divak\Vision AI\dist\index.html`
+   - Source: `<YourProjectRoot>\dist\index.html` (replace `<YourProjectRoot>` with your actual project path)
    - Destination: `public_html/index.html`
    
-   - Source: `C:\Users\divak\Vision AI\dist\assets\` (entire folder)
+   - Source: `<YourProjectRoot>\dist\assets\` (entire folder)
    - Destination: `public_html/assets/` (upload entire folder)
    
-   - Source: `C:\Users\divak\Vision AI\.htaccess`
+   - Source: `<YourProjectRoot>\.htaccess`
    - Destination: `public_html/.htaccess`
+   
+   **Note:** Replace `<YourProjectRoot>` with your actual project directory path (e.g., `C:\Users\<YourUsername>\Vision AI` or `/home/<username>/Vision-AI`)
 
 **Option B: Create ZIP and Upload**
 1. On your computer, create a ZIP file containing:

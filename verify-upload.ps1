@@ -32,16 +32,20 @@ Write-Host "`nChecking server files...`n" -ForegroundColor Yellow
 # Build SSH command
 $sshCmd = "cd $REMOTE_PATH && echo 'FRONTEND:' && test -f index.html && echo '✅ index.html' || echo '❌ index.html missing' && test -f .htaccess && echo '✅ .htaccess' || echo '❌ .htaccess missing' && test -d assets && echo '✅ assets/ folder' || echo '❌ assets/ folder missing' && echo '' && echo 'BACKEND:' && test -d backend && echo '✅ backend/ folder' || echo '❌ backend/ folder missing'"
 
-try {
-    if (Test-Path $SSH_KEY) {
-        Write-Host "Using SSH key authentication...`n" -ForegroundColor Green
-        ssh -i $SSH_KEY $SERVER $sshCmd
-    } else {
-        Write-Host "SSH key not found. Using password authentication...`n" -ForegroundColor Yellow
-        ssh $SERVER $sshCmd
-    }
-} catch {
-    Write-Host "`n⚠️  Could not connect via SSH. Please check manually:" -ForegroundColor Yellow
+# Check SSH key availability
+if (Test-Path $SSH_KEY) {
+    Write-Host "Using SSH key authentication...`n" -ForegroundColor Green
+    ssh -i $SSH_KEY -o ConnectTimeout=10 -o StrictHostKeyChecking=no $SERVER $sshCmd
+    $sshExitCode = $LASTEXITCODE
+} else {
+    Write-Host "SSH key not found. Using password authentication...`n" -ForegroundColor Yellow
+    ssh -o ConnectTimeout=10 -o StrictHostKeyChecking=no $SERVER $sshCmd
+    $sshExitCode = $LASTEXITCODE
+}
+
+# Check if SSH command failed
+if ($sshExitCode -ne 0) {
+    Write-Host "`n⚠️  Could not connect via SSH (exit code: $sshExitCode). Please check manually:" -ForegroundColor Yellow
     Write-Host "   1. Login to Hostinger File Manager" -ForegroundColor White
     Write-Host "   2. Navigate to: domains/vision.innovfix.in/public_html/" -ForegroundColor White
     Write-Host "   3. Verify files listed above are present`n" -ForegroundColor White

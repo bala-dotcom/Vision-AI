@@ -41,8 +41,10 @@ You need to add **3 secrets**. Add them one by one:
 ### Option A: If you already have an SSH key
 
 1. **Find your SSH private key:**
-   - Location: `C:\Users\divak\.ssh\id_rsa_github_hostinger`
-   - Or: `C:\Users\divak\.ssh\id_rsa_hostinger`
+   - Location: `%USERPROFILE%\.ssh\id_rsa_github_hostinger` (Windows)
+   - Or: `%USERPROFILE%\.ssh\id_rsa_hostinger` (Windows)
+   - Or: `~/.ssh/id_rsa_github_hostinger` (Linux/Mac)
+   - Or: `~/.ssh/id_rsa_hostinger` (Linux/Mac)
 
 2. **Open it in a text editor** (VS Code, Notepad, etc.)
 
@@ -133,7 +135,8 @@ You should see:
 ## 🆘 Troubleshooting
 
 ### Can't find SSH key?
-- Check: `C:\Users\divak\.ssh\`
+- **Windows:** Check `%USERPROFILE%\.ssh\` (typically `C:\Users\<YourUsername>\.ssh\`)
+- **Linux/Mac:** Check `~/.ssh/`
 - Look for files: `id_rsa*`, `id_ed25519*`
 
 ### SSH key format wrong?

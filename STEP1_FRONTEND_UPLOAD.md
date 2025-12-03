@@ -54,7 +54,7 @@ Upload your frontend build files to Hostinger's `public_html/` directory.
 
 1. **Click "Upload" button** (usually at the top)
 2. **Select files from your computer:**
-   - Navigate to: `C:\Users\divak\Vision AI\dist\`
+   - Navigate to: `<YourProjectRoot>\dist\` (replace `<YourProjectRoot>` with your actual project path)
    - Select **ALL files** in the `dist` folder:
      - `index.html`
      - `assets/` folder (select the entire folder)
@@ -63,7 +63,7 @@ Upload your frontend build files to Hostinger's `public_html/` directory.
 #### Option B: Using Drag & Drop
 
 1. **Open File Explorer** on your computer
-2. **Navigate to:** `C:\Users\divak\Vision AI\dist\`
+2. **Navigate to:** `<YourProjectRoot>\dist\` (replace `<YourProjectRoot>` with your actual project path)
 3. **Select all files** (Ctrl+A)
 4. **Drag and drop** them into the Hostinger File Manager window
 5. **Wait for upload** to complete
@@ -72,8 +72,10 @@ Upload your frontend build files to Hostinger's `public_html/` directory.
 
 1. **In Hostinger File Manager**, make sure you're still in `public_html/`
 2. **Click "Upload"** again
-3. **Select:** `C:\Users\divak\Vision AI\.htaccess`
+3. **Select:** `<YourProjectRoot>\.htaccess` (replace `<YourProjectRoot>` with your actual project path)
 4. **Upload** the file
+
+**Note:** Replace `<YourProjectRoot>` with your actual project directory path (e.g., `C:\Users\<YourUsername>\Vision AI` on Windows or `/home/<username>/Vision-AI` on Linux/Mac)
 
 ---
 

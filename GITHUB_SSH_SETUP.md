@@ -16,7 +16,10 @@ For GitHub, you need a **separate SSH key** (or you can use the same key, but it
 
 ```powershell
 # Navigate to your project
-cd "C:\Users\divak\Vision AI"
+cd "<YourProjectRoot>"  # Replace with your actual project path
+```
+
+**Example:** `cd "C:\Users\<YourUsername>\Vision AI"` (Windows) or `cd ~/Vision-AI` (Linux/Mac)
 
 # Generate new SSH key for GitHub
 ssh-keygen -t ed25519 -C "your-email@example.com" -f "$env:USERPROFILE\.ssh\id_ed25519_github"
@@ -117,10 +120,13 @@ After adding your SSH key to GitHub:
 ### Step 1: Update Remote URL
 
 ```powershell
-cd "C:\Users\divak\Vision AI"
+cd "<YourProjectRoot>"  # Replace with your actual project path
 
 # Check current remote URL
 git remote -v
+```
+
+**Example:** `cd "C:\Users\<YourUsername>\Vision AI"` (Windows) or `cd ~/Vision-AI` (Linux/Mac)
 
 # Change to SSH (if currently HTTPS)
 git remote set-url origin git@github.com:bala-dotcom/Vision-AI.git

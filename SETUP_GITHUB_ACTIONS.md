@@ -77,11 +77,13 @@ The workflow file is already created at `.github/workflows/deploy.yml`
 **Commit and push:**
 
 ```powershell
-cd "C:\Users\divak\Vision AI"
+cd "<YourProjectRoot>"  # Replace with your actual project path
 git add .github/workflows/deploy.yml
 git commit -m "Add GitHub Actions deployment workflow"
 git push origin main
 ```
+
+**Example:** `cd "C:\Users\<YourUsername>\Vision AI"` (Windows) or `cd ~/Vision-AI` (Linux/Mac)
 
 ### Step 4: Test Deployment
 

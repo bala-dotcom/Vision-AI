@@ -19,8 +19,10 @@ Console shows these errors:
 3. **Delete or rename the old `.htaccess` file**
 4. **Upload the NEW `.htaccess` file** from:
    ```
-   C:\Users\divak\Vision AI\.htaccess
+   <YourProjectRoot>\.htaccess
    ```
+   
+   **Note:** Replace `<YourProjectRoot>` with your actual project directory path (e.g., `C:\Users\<YourUsername>\Vision AI` or `/home/<username>/Vision-AI`)
 
 ### Step 2: Verify Assets Folder
 

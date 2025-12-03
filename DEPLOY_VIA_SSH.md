@@ -141,7 +141,7 @@ If SCP doesn't work, use an SFTP client:
    - Host: `in-mum-web1990.main-hosting.eu`
    - Username: `u623025070`
    - Port: `22`
-   - Key file: `C:\Users\divak\.ssh\id_rsa_github_hostinger`
+   - Key file: `%USERPROFILE%\.ssh\id_rsa_github_hostinger` (Windows) or `~/.ssh/id_rsa_github_hostinger` (Linux/Mac)
 
 2. **WinSCP** (free): https://winscp.net/
    - Same settings as above

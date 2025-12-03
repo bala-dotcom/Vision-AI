@@ -76,9 +76,11 @@
 
 1. **Delete old files** from `public_html/`
 2. **Re-upload from your computer:**
-   - `C:\Users\divak\Vision AI\dist\index.html`
-   - `C:\Users\divak\Vision AI\dist\assets\` (entire folder)
-   - `C:\Users\divak\Vision AI\.htaccess`
+   - `<YourProjectRoot>\dist\index.html`
+   - `<YourProjectRoot>\dist\assets\` (entire folder)
+   - `<YourProjectRoot>\.htaccess`
+   
+   **Note:** Replace `<YourProjectRoot>` with your actual project directory path (e.g., `C:\Users\<YourUsername>\Vision AI` or `/home/<username>/Vision-AI`)
 
 ### Fix 2: Check Assets Folder Structure
 

@@ -13,8 +13,10 @@ Generate a new SSH key pair for GitHub Actions to deploy to Hostinger.
 2. Select **"Windows PowerShell"** or **"Terminal"**
 3. Navigate to your project:
    ```powershell
-   cd "C:\Users\divak\Vision AI"
+   cd "<YourProjectRoot>"  # Replace with your actual project path
    ```
+   
+   **Example:** `cd "C:\Users\<YourUsername>\Vision AI"` (Windows) or `cd ~/Vision-AI` (Linux/Mac)
 
 ### Step 2: Generate SSH Key
 

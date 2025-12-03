@@ -38,19 +38,21 @@ If the structure is wrong:
 **Option A: Upload Individual Files**
 
 1. **Upload `index.html`:**
-   - Source: `C:\Users\divak\Vision AI\dist\index.html`
+   - Source: `<YourProjectRoot>\dist\index.html` (replace `<YourProjectRoot>` with your actual project path)
    - Destination: `public_html/index.html`
 
 2. **Upload `assets/` folder:**
-   - Source: `C:\Users\divak\Vision AI\dist\assets\` (entire folder)
+   - Source: `<YourProjectRoot>\dist\assets\` (entire folder)
    - Destination: `public_html/assets/` (create folder if needed)
    - Make sure BOTH files are inside:
      - `assets/index-BhofRawG.css`
      - `assets/index-CHz6bupw.js`
 
 3. **Upload `.htaccess`:**
-   - Source: `C:\Users\divak\Vision AI\.htaccess`
+   - Source: `<YourProjectRoot>\.htaccess`
    - Destination: `public_html/.htaccess`
+   
+   **Note:** Replace `<YourProjectRoot>` with your actual project directory path (e.g., `C:\Users\<YourUsername>\Vision AI` or `/home/<username>/Vision-AI`)
 
 **Option B: Use the New ZIP File**
 
