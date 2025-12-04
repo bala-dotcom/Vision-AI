@@ -71,7 +71,15 @@ router.get('/stats', async (req, res) => {
         });
     } catch (error) {
         console.error('❌ [GET /api/usage/stats] Error:', error);
-        res.status(500).json({ error: error.message });
+        // Return default stats instead of error - frontend will use localStorage fallback
+        res.json({
+            totalVideos: 0,
+            totalCost: 0,
+            avgCost: 0,
+            resolutionCounts: { '720p': 0, '1080p': 0, '4k': 0 },
+            withSound: 0,
+            withoutSound: 0
+        });
     }
 });
 
@@ -87,7 +95,8 @@ router.get('/session-cost', async (req, res) => {
         res.json({ sessionCost });
     } catch (error) {
         console.error('❌ [GET /api/usage/session-cost] Error:', error);
-        res.status(500).json({ error: error.message });
+        // Return 0 instead of error - frontend will use localStorage fallback
+        res.json({ sessionCost: 0 });
     }
 });
 
