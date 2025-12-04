@@ -15,10 +15,15 @@ const PORT = process.env.PORT || 3001;
 
 // Enable CORS for frontend
 const corsOptions = {
-    origin: process.env.FRONTEND_URL || '*', // In production, set FRONTEND_URL to your domain
-    credentials: true
+    origin: ['https://vision.innovfix.in', 'http://localhost:5173', 'http://localhost:3000'],
+    credentials: true,
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization']
 };
 app.use(cors(corsOptions));
+
+// Handle preflight requests
+app.options('*', cors(corsOptions));
 app.use(express.json({ limit: '50mb' }));
 
 // Initialize Google Auth with service account credentials

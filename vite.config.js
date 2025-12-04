@@ -11,7 +11,7 @@ export default defineConfig({
   },
   define: {
     // Set backend URL for production - uses same domain, no subdomain
-    'import.meta.env.VITE_BACKEND_URL': JSON.stringify('https://vision.innovfix.in')
+    'import.meta.env.VITE_BACKEND_URL': JSON.stringify('https://vision-ai-production.up.railway.app')
   },
   server: {
     proxy: {
