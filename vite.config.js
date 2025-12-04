@@ -9,6 +9,10 @@ export default defineConfig({
     assetsDir: 'assets', // Assets folder name
     outDir: 'dist',
   },
+  define: {
+    // Set backend URL for production - uses same domain, no subdomain
+    'import.meta.env.VITE_BACKEND_URL': JSON.stringify('https://vision.innovfix.in')
+  },
   server: {
     proxy: {
       '/api': {

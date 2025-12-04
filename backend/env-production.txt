@@ -1,0 +1,30 @@
+# Production Environment Variables for Backend
+# IMPORTANT: Rename this file to .env on Hostinger
+
+# Server Configuration
+PORT=3001
+NODE_ENV=production
+
+# Frontend URL (your deployed website)
+FRONTEND_URL=https://vision.innovfix.in
+
+# Backend URL
+BACKEND_URL=https://api.vision.innovfix.in
+
+# Database Configuration (Hostinger MySQL)
+DB_HOST=localhost
+DB_USER=u623025070_vision2025
+DB_PASSWORD=Vision@20252025
+DB_NAME=u623025070_vision_ai_db
+DB_PORT=3306
+
+# Google Cloud Configuration
+# Get these from your Google Cloud Console > IAM > Service Accounts
+GOOGLE_PROJECT_ID=your-google-project-id
+GOOGLE_SERVICE_ACCOUNT_EMAIL=your-service-account@your-project.iam.gserviceaccount.com
+GOOGLE_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\nYOUR_PRIVATE_KEY_HERE\n-----END PRIVATE KEY-----\n"
+
+
+
+
+
